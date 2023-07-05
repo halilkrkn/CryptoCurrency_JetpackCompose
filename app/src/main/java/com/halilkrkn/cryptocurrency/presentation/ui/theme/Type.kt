@@ -1,4 +1,4 @@
-package com.halilkrkn.cryptocurrency.ui.theme
+package com.halilkrkn.cryptocurrency.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
