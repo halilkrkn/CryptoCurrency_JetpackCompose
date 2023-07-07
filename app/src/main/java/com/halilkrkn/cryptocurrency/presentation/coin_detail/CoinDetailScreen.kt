@@ -24,7 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.google.accompanist.flowlayout.FlowRow
+import com.halilkrkn.cryptocurrency.R
 import com.halilkrkn.cryptocurrency.presentation.Screen
+import com.halilkrkn.cryptocurrency.presentation.animation.CoinLottieAnimation
 import com.halilkrkn.cryptocurrency.presentation.coin_detail.components.CoinTag
 import com.halilkrkn.cryptocurrency.presentation.coin_detail.components.TeamListItem
 import com.halilkrkn.cryptocurrency.presentation.coin_list.CoinListViewModel
@@ -118,8 +120,9 @@ fun CoinDetailScreen(
             )
         }
         if (state.isLoading) {
-            CircularProgressIndicator(
-                modifier = Modifier.align(Alignment.Center)
+            CoinLottieAnimation(
+                modifier = Modifier.align(Alignment.Center),
+                raw = R.raw.lottie_comp
             )
         }
     }
