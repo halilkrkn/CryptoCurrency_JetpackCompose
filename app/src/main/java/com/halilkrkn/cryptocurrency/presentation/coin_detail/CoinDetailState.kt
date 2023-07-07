@@ -4,7 +4,7 @@ import com.halilkrkn.cryptocurrency.domain.model.Coin
 import com.halilkrkn.cryptocurrency.domain.model.CoinDetail
 
 data class CoinDetailState(
-    val isLoading: Boolean = false,
+    var isLoading: Boolean = false,
     val coin: CoinDetail ?= null,
     val error: String = ""
 )

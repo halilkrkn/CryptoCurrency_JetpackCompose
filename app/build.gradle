@@ -61,6 +61,7 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
 
 
+
     // Compose dependencies
     // Compose dependencies
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
@@ -93,6 +94,9 @@ dependencies {
     // Lottie
     implementation "com.airbnb.android:lottie-compose:6.0.1"
 
+    // Swipe Refresh
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.31.5-beta")
+    implementation "androidx.compose.material:material:1.4.3"
 
 
 
