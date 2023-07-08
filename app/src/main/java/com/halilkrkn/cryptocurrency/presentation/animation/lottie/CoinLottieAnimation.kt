@@ -1,4 +1,4 @@
-package com.halilkrkn.cryptocurrency.presentation.animation
+package com.halilkrkn.cryptocurrency.presentation.animation.lottie
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
