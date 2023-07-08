@@ -25,8 +25,8 @@ class CoinDetailViewModel @Inject constructor(
     private val _state = mutableStateOf(CoinDetailState())
     val state: State<CoinDetailState> = _state
 
-//    private val _isLoading = MutableStateFlow(false)
-//    val isLoading = _isLoading.asStateFlow()
+    private val _isLoading = MutableStateFlow(false)
+    val isLoading = _isLoading.asStateFlow()
 
     init {
         savedStateHandle.get<String>(PARAM_COIN_ID)?.let { coinId ->
@@ -39,6 +39,7 @@ class CoinDetailViewModel @Inject constructor(
     }
 
     private fun getCoin(coinId: String) {
+        _isLoading.value = true
         viewModelScope.launch {
             getCoinUseCase(coinId).onEach { result ->
                 when (result) {
@@ -61,7 +62,6 @@ class CoinDetailViewModel @Inject constructor(
                 }
             }.launchIn(viewModelScope)
         }
-//        _isLoading.value = false
-        _state.value.isLoading = false
+        _isLoading.value = false
     }
 }

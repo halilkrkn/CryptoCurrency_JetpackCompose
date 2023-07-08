@@ -36,8 +36,7 @@ fun CoinDetailScreen(
     viewModel: CoinDetailViewModel = hiltViewModel(),
 ) {
     val state = viewModel.state.value
-    val isRefreshing = viewModel.state.value.isLoading
-//    val isRefreshing = viewModel.isLoading.value
+    val isRefreshing = viewModel.isLoading.value
     val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = isRefreshing)
 
     Box(modifier = Modifier.fillMaxSize()) {
