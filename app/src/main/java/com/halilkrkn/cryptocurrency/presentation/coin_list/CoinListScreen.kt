@@ -21,7 +21,8 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.halilkrkn.cryptocurrency.R
 import com.halilkrkn.cryptocurrency.presentation.Screen
-import com.halilkrkn.cryptocurrency.presentation.animation.CoinLottieAnimation
+import com.halilkrkn.cryptocurrency.presentation.animation.lottie.CoinLottieAnimation
+import com.halilkrkn.cryptocurrency.presentation.animation.shimmer.ShimmerEffect
 import com.halilkrkn.cryptocurrency.presentation.coin_list.components.CoinListItem
 
 
@@ -53,7 +54,6 @@ fun CoinListScreen(
                     )
                 }
             }
-
         }
 
         if (state.error.isNotBlank()) {
@@ -69,12 +69,13 @@ fun CoinListScreen(
         }
 
         if (state.isLoading) {
-            CoinLottieAnimation(
-                modifier = Modifier
-                    .size(250.dp, 250.dp)
-                    .align(Alignment.Center),
-                raw = R.raw.lottie_crypto
-            )
+            ShimmerEffect()
+//            CoinLottieAnimation(
+//                modifier = Modifier
+//                    .size(250.dp, 250.dp)
+//                    .align(Alignment.Center),
+//                raw = R.raw.lottie_crypto
+//            )
         }
     }
 }

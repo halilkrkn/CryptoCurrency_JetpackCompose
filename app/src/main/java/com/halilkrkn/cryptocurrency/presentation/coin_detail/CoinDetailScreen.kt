@@ -26,7 +26,7 @@ import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.halilkrkn.cryptocurrency.R
-import com.halilkrkn.cryptocurrency.presentation.animation.CoinLottieAnimation
+import com.halilkrkn.cryptocurrency.presentation.animation.lottie.CoinLottieAnimation
 import com.halilkrkn.cryptocurrency.presentation.coin_detail.components.CoinTag
 import com.halilkrkn.cryptocurrency.presentation.coin_detail.components.TeamListItem
 
